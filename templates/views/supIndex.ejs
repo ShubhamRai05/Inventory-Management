@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Dashboard Sidebar Menu</title>-->
+    <link rel="stylesheet" href="supplier.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+ 
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+
+
+                <div class="text logo-text">
+                    <span class="name">Welcome</span>
+                    <span class="profession">student Name</span>
+                </div>
+            </div>
+
+
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+
+
+        <div class="menu-bar">
+            <div class="menu">
+
+
+
+
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#Dashboard" onclick="dashboard()">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href="#payment" onclick="payment()">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Payment Status</span>
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+                    <li class="nav-link">
+                        <a href="#addproduct" onclick="addproduct()">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Add product</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href="#account" onclick="account()">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#userList" onclick="userList()">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">History Of Selling</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#category" onclick="category()">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Add category</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#stock" onclick="stock()">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Stock Reminder</span>
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+
+
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </nav>
+
+
+
+    <section class="home">
+        <div class="text">
+           <div style="background: repeating-linear-gradient(45deg, black, transparent 100px); height: 70px;">
+               <p class="brandName">Inventory management system</p>
+           </div>
+            <br>
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <h3>11+</h3>
+                  <p>Total Parcels</p>
+                </div>
+              </div>
+            
+              <div class="column">
+                <div class="card">
+                  <h3>55+</h3>
+                  <p>Ready to Pickup</p>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="card">
+                  <h3>100+</h3>
+                  <p>Delivered</p>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="card">
+                  <h3>100+</h3>
+                  <p>Out for Delivery
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+        <div
+        <div id="Dashboard" class="collpase">
+            <div style="text-align: center;"> Student Details </div>
+        </div>
+        <div id="payment" class="collpase">
+            <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+              </table>
+        </div>
+
+
+        <div id="addproduct" class="collpase">
+            <div class="container">
+                <div class="row">
+
+                    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"> Add New Product</div>
+                                 </div>  
+                            <div class="panel-body" >
+                                <form action="/add-new-product" id="EmployeeForm" class="form-horizontal" method="post"  role="form" enctype="multipart/form-data">
+
+                                              <div class="form-group">
+                                                <label for="username" class="col-md-3 control-label">Product Image</label>
+                                                <div class="col-md-9">
+                                                    <input type="file" class="form-control" name="file" >
+                                                </div>
+                                            </div>
+
+                                      <div class="form-group">
+                                        <label for="username" class="col-md-3 control-label">Product Name</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="pname" placeholder="Enter YourPassword Category Name">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="username" class="col-md-3 control-label">Product Category</label>
+                                        <div class="col-md-9">
+                                           <select class="form-control" name="cat">
+                                               <option value="">Choose Category</option>
+                                               <% if(records.length > 0){
+                                                records.forEach(function(row){
+                                                %>
+                                               <option value="<%= row.cate %>"><%= row.cate%></option>
+                                               <%  }) } %>
+                                              </select>
+                                              </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="username" class="col-md-3 control-label">Product price</label>
+                                        <div class="col-md-9">
+                                            <input type="number" class="form-control" name="price" placeholder="Enter YourPassword Category Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="username" class="col-md-3 control-label"> Manufacturing Date</label>
+                                        <div class="col-md-9">
+                                            <input type="date" class="form-control" name="pmdate" placeholder="Enter YourPassword Category Name">
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label for="username" class="col-md-3 control-label">Expiry Date</label>
+                                        <div class="col-md-9">
+                                            <input type="date" class="form-control" name="pxdate" placeholder="Enter YourPassword Category Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="username" class="col-md-3 control-label">Product Description</label>
+                                        <div class="col-md-9">
+                                            <textarea type="text" class="form-control" name="descr" placeholder="Enter YourPassword Category Name"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!-- Button -->                                        
+                                        <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="Add Product" class="btn btn-primary">   
+                                        </div>
+                                    </div>
+                                    
+                                    <p><a href="#">View All Lists</a></p>
+   
+                                </form>
+                             </div>
+                        </div>             
+             </div> 
+                </div>
+              </div>
+        </div>
+        <div id="account" class="collpase">
+            <h1 style="text-align: center; color: red;">No Data account</h1>
+        </div>
+        <div id="userList" class="collpase">
+            <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+              </table>
+        </div>
+        <div id="category" class="collpase">
+            <div class="container">
+                <div class="row">
+
+                    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"> Add New Category</div>
+                                 </div>  
+                            <div class="panel-body" >
+                                <form action="/add-new-category" id="EmployeeForm" class="form-horizontal" method="post"  role="form">
+
+
+                                      <div class="form-group">
+                                        <label for="category" class="col-md-12 ">Category Name</label>
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" name="cate" placeholder="Enter Category Name">
+                                        </div>
+                                    </div>
+                                    
+                                  
+
+                                    <div class="form-group">
+                                        <!-- Button -->                                        
+                                        <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="Add Category" class="btn btn-primary">   
+                                        </div>
+                                    </div>
+                                    
+                                    <p><a href="#">View All Lists</a></p>
+   
+                                </form>
+                             </div>
+                        </div>             
+             </div> 
+                </div>
+              </div>
+        </div>
+        <div id="stock" class="collpase">
+            <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>Alfreds Futterkiste</td>
+                  <td>Maria Anders</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td>Centro comercial Moctezuma</td>
+                  <td>Francisco Chang</td>
+                  <td>Mexico</td>
+                </tr>
+                <tr>
+                  <td>Ernst Handel</td>
+                  <td>Roland Mendel</td>
+                  <td>Austria</td>
+                </tr>
+                <tr>
+                  <td>Island Trading</td>
+                  <td>Helen Bennett</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Laughing Bacchus Winecellars</td>
+                  <td>Yoshi Tannamuri</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>Magazzini Alimentari Riuniti</td>
+                  <td>Giovanni Rovelli</td>
+                  <td>Italy</td>
+                </tr>
+              </table>
+        </div>
+
+    </section>
+
+
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+            } else {
+                modeText.innerText = "Dark mode";
+
+            }
+        });
+
+        function dashboard() {
+            document.getElementById("Dashboard").classList.add('collpase-open');
+            document.getElementById("Dashboard").classList.remove('collpase');
+            document.getElementById("addproduct").classList.remove('collpase-open');
+            document.getElementById("addproduct").classList.add('collpase');
+            document.getElementById("payment").classList.remove('collpase-open');
+            document.getElementById("payment").classList.add('collpase');
+            document.getElementById("account").classList.remove('collpase-open');
+            document.getElementById("account").classList.add('collpase');
+            document.getElementById("userList").classList.remove('collpase-open');
+            document.getElementById("userList").classList.add('collpase');
+            document.getElementById("category").classList.remove('collpase-open');
+            document.getElementById("category").classList.add('collpase');
+            document.getElementById("stock").classList.remove('collpase-open');
+            document.getElementById("stock").classList.add('collpase');
+
+        }
+
+        function payment() {
+            document.getElementById("payment").classList.add('collpase-open');
+            document.getElementById("payment").classList.remove('collpase');
+            document.getElementById("addproduct").classList.remove('collpase-open');
+            document.getElementById("addproduct").classList.add('collpase');
+            document.getElementById("Dashboard").classList.remove('collpase-open');
+            document.getElementById("Dashboard").classList.add('collpase');
+            document.getElementById("account").classList.remove('collpase-open');
+            document.getElementById("account").classList.add('collpase');
+            document.getElementById("userList").classList.remove('collpase-open');
+            document.getElementById("userList").classList.add('collpase');
+            document.getElementById("category").classList.remove('collpase-open');
+            document.getElementById("category").classList.add('collpase');
+            document.getElementById("stock").classList.remove('collpase-open');
+            document.getElementById("stock").classList.add('collpase');
+        }
+
+        function addproduct() {
+
+            document.getElementById("addproduct").classList.add('collpase-open');
+            document.getElementById("addproduct").classList.remove('collpase');
+            document.getElementById("payment").classList.remove('collpase-open');
+            document.getElementById("payment").classList.add('collpase');
+            document.getElementById("Dashboard").classList.remove('collpase-open');
+            document.getElementById("Dashboard").classList.add('collpase');
+            document.getElementById("account").classList.remove('collpase-open');
+            document.getElementById("account").classList.add('collpase');
+            document.getElementById("userList").classList.remove('collpase-open');
+            document.getElementById("userList").classList.add('collpase');
+            document.getElementById("category").classList.remove('collpase-open');
+            document.getElementById("category").classList.add('collpase');
+            document.getElementById("stock").classList.remove('collpase-open');
+            document.getElementById("stock").classList.add('collpase');
+
+        }
+        function account() {
+            document.getElementById("account").classList.add('collpase-open');
+            document.getElementById("account").classList.remove('collpase');
+            document.getElementById("addproduct").classList.remove('collpase-open');
+            document.getElementById("addproduct").classList.add('collpase');
+            document.getElementById("Dashboard").classList.remove('collpase-open');
+            document.getElementById("Dashboard").classList.add('collpase');
+            document.getElementById("payment").classList.remove('collpase-open');
+            document.getElementById("payment").classList.add('collpase');
+            document.getElementById("userList").classList.remove('collpase-open');
+            document.getElementById("userList").classList.add('collpase');
+            document.getElementById("category").classList.remove('collpase-open');
+            document.getElementById("category").classList.add('collpase');
+            document.getElementById("stock").classList.remove('collpase-open');
+            document.getElementById("stock").classList.add('collpase');
+        }
+        function userList() {
+            document.getElementById("userList").classList.add('collpase-open');
+            document.getElementById("userList").classList.remove('collpase');
+            document.getElementById("account").classList.remove('collpase-open');
+            document.getElementById("account").classList.add('collpase');
+            document.getElementById("category").classList.remove('collpase-open');
+            document.getElementById("category").classList.add('collpase');
+            document.getElementById("addproduct").classList.remove('collpase-open');
+            document.getElementById("addproduct").classList.add('collpase');
+            document.getElementById("Dashboard").classList.remove('collpase-open');
+            document.getElementById("Dashboard").classList.add('collpase');
+            document.getElementById("payment").classList.remove('collpase-open');
+            document.getElementById("payment").classList.add('collpase');
+            document.getElementById("stock").classList.remove('collpase-open');
+            document.getElementById("stock").classList.add('collpase');
+        }
+        function category() {
+            document.getElementById("category").classList.add('collpase-open');
+            document.getElementById("category").classList.remove('collpase');
+            document.getElementById("account").classList.remove('collpase-open');
+            document.getElementById("account").classList.add('collpase');
+            document.getElementById("addproduct").classList.remove('collpase-open');
+            document.getElementById("addproduct").classList.add('collpase');
+            document.getElementById("Dashboard").classList.remove('collpase-open');
+            document.getElementById("Dashboard").classList.add('collpase');
+            document.getElementById("payment").classList.remove('collpase-open');
+            document.getElementById("payment").classList.add('collpase');
+            document.getElementById("userList").classList.remove('collpase-open');
+            document.getElementById("userList").classList.add('collpase');
+            document.getElementById("stock").classList.remove('collpase-open');
+            document.getElementById("stock").classList.add('collpase');
+        }
+        function stock() {
+            document.getElementById("stock").classList.add('collpase-open');
+            document.getElementById("stock").classList.remove('collpase');
+            document.getElementById("userList").classList.remove('collpase-open');
+            document.getElementById("userList").classList.add('collpase');
+            document.getElementById("account").classList.remove('collpase-open');
+            document.getElementById("account").classList.add('collpase');
+            document.getElementById("category").classList.remove('collpase-open');
+            document.getElementById("category").classList.add('collpase');
+            document.getElementById("addproduct").classList.remove('collpase-open');
+            document.getElementById("addproduct").classList.add('collpase');
+            document.getElementById("Dashboard").classList.remove('collpase-open');
+            document.getElementById("Dashboard").classList.add('collpase');
+            document.getElementById("payment").classList.remove('collpase-open');
+            document.getElementById("payment").classList.add('collpase');
+          
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
